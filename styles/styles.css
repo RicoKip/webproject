@@ -1,0 +1,373 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+    Created on : 08-Apr-2019, 18:17:45
+    Author     : erickipkemoi
+*/
+
+
+/*
+Misc stylings
+box sizing, W3S, allowas padding and border to be included in the total width and height
+*/
+* {
+	box-sizing: border-box
+}
+
+/*container for columns*/
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/*row styling*/
+.rowClr{
+   background-color: gainsboro;
+}
+
+/*columns contained in rows*/
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/*horizontal line styling*/
+hr.new1{
+    border: solid gainsboro 1px;
+    margin: 5px;
+}
+/*IMAGE BOX*/
+.imagebox{
+    border: solid #ccc 1px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /*overflow: hidden;*/
+}
+/*users image placeholder*/
+.backGroundImage{
+	height: 300px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+/*location*/
+.locIcon{
+    height: 30px;
+    width: 50px;
+    background-image: url(../images/loc.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+/*location*/
+.mailIcon{
+    height: 30px;
+    width: 50px;
+    background-image: url(../images/mail.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+/*map view*/
+#mapView{
+    height: 400px;
+    width: 100%;
+    border: solid gray 2px;
+    border-radius: 2px;
+}
+.padd{
+    padding: 14px 20px;
+}
+.marg{
+    margin: 8px 0px;
+}
+
+/*
+Main windows stylings
+*/
+
+body{
+	font-family: Arial;
+	margin: 0;
+}
+
+/*
+Index page styling
+main window slideshow static image display
+*/
+.slideshow{
+	height: 500px;
+	background-image: url(../images/cornFieldProject.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.slideshowBrd{
+    border-bottom: solid #333 5px;
+}
+/*image box for companies*/
+.imagebox1{
+    height: 200px;
+    background-image: url(../images/servicesImageBox.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+/*image box for farms*/
+.imagebox2{
+    height: 200px;
+    background-image: url(../images/farmImageBox.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+/*image box for forum*/
+.imagebox3{
+    height: 200px;
+    background-image: url(../images/forumImageBox.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+/*class style for content boxes*/
+.boxSpc{
+    border: solid gainsboro 1px;
+    border-radius: 2px;
+}
+.boxBrd{
+    border: solid gainsboro 1px;
+}
+.boxTxt{
+    display: grid;
+    text-align: center;
+}
+.boxTxt a{
+    text-decoration: none;
+    color: gray;
+}
+.boxTxt p{
+    margin-top: 50px;
+    color: #333;
+}
+/*Sessions box will hold the sign-in and username*/
+.sessionBox{
+    display: inline-flex;
+    text-align: center;
+    background-color: #333;
+    padding: 14px 20px;
+}
+.sessionBox a{
+    text-decoration: none;
+    color: white;
+}
+.sessionBox:hover{
+    background-color: #ddd;
+}
+/*main window sign-in display*/
+.navbarIndexMenu{
+	display: inline-flex;
+	margin-top: 5px;
+        margin-right: 10px;
+	background-color: #333;
+	border-radius: 2px;
+	float: right;
+}
+/*home window navbar styling*/
+.navbarIndexMenu a{
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px
+}
+.navbarIndexMenu a:hover{
+    background-color: #ddd;
+    border-radius: 2px;
+    color: black;
+}
+
+/*
+Styling for other window views
+main window navigantion bar content holder
+*/
+.navbar{
+	display: flex;
+	background-color: #333;
+}
+/*navigation bar link text styling*/
+.navbar a{
+	color: white;
+	padding: 14px 20px;
+	text-decoration: none;
+	text-align: center;
+}
+/*mouse hover styling*/
+.navbar a:hover{
+	background-color: #ddd;
+	color: black;
+}
+
+/*
+*Login and Registration Form Styling
+*W3S
+*/
+input[type=text], input[type=password]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: solid #ccc 1px;
+}
+button.signInBtn{
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+}
+button.signInBtn:hover{
+    background-color: #ddd;
+    color: black;
+}
+button.loginBtn{
+    background-color: #333;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    
+}
+button.loginBtn:hover{
+    opacity: 0.8;
+}
+span.passWd{
+    float: right;
+    padding-top: 16px;
+}
+
+/*login modal background*/
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+/*modal content*/
+.modal-content{
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: solid #888 1px;
+    width: 50%;
+}
+/*zoom animantion*/
+.animate{
+    animation: animatezoom 0.6s
+}
+@keyframes animatezoom{
+    from{transform:scale(0)}
+    to{transform:scale(1)}
+}
+/*container form login modal form*/
+.containerLgn{
+    padding: 16px;
+}
+
+/*styling for content placeholder*/
+.content{
+	flex: 80%;
+	background-color: white;
+        margin-right: 10%;
+        margin-left: 10%;
+	/*padding*/
+}
+.contentBrd{
+    border-left: solid gainsboro 1px;
+    border-right: solid gainsboro 1px;
+}
+
+/*footer styling*/
+.footer{
+	padding: 10px;
+	text-align: center;
+	background: gray;
+}
+
+/*loggedin dropdown*/
+button.dropdownBtn{
+    /*background-color: #333;*/
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.dropdown{
+    display: flex;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #fefefe;
+    min-width: 160px;
+    z-index: 1;
+}
+.dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover{
+    background-color: #f1f1f1
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.dropdown:hover .dropdownBtn{
+    background-color: #ddd;
+}
+
+
+/*
+Responsive layout allows columns to stack
+ontop of ewach othe when the crenn size reduces
+*/
+@media only screen and (max-device-width: 400px){
+	.row, .navbar{
+		flex-direction: column;
+	}
+        span.psw{
+            display: block;
+            float: none;
+        }
+}
