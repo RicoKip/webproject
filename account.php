@@ -7,8 +7,7 @@ and open the template in the editor.
 <?php $title = "Account"?>
 <?php include ('includes/header.php');?>
 <?php include ('includes/navbarTemp.php');?>
-<?php include ('includes/accountHead.php');?>
+<?php include ('processes/setAccount.php');?>
 <!--method to display gallery upload form-->
 
-<?php include ('includes/accountFooter.php');?>
 <?php include ('includes/footer.php');?>

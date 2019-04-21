@@ -1,7 +1,7 @@
 <?php
 //establish connection
 
-require 'connection.php';
+require_once ('processes/connection.php');
 session_start();
 //when login button press
 if($_SERVER['REQUEST_METHOD'] == 'POST'){

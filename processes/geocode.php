@@ -16,4 +16,4 @@ $city = $_SESSION['userCity'];
 $country = $_SESSION['userCountry'];
 
 $fullAdr = "'".$adr1."', '".$adr2."', '".$city."', '".$zip."', '".$country."' ";
-$geo = file_get_contents($fullAdr)
+$geo = file_get_contents($fullAdr);
