@@ -12,12 +12,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         if(empty($email) || empty($pass)){
             header("location:loginForm.php?Empty= Empty fields");
         }else{
+            //test to see if data is being passed
             echo "Your username after escaping: {$email}<br>";
             echo "Your password after scaping and MD5: {$pass}<br>";
             $query = "SELECT * FROM users WHERE email='".$email."' AND pass'".$pass."'";
             
             
             $result = mysqli_query($conn, $query);
+            //test query
             echo "Count of users with the same email and password = " . mysqli_num_rows($result);
             $row = mysqli_fetch_array($result);
             //$active = $row['active'];
