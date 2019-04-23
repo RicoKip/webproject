@@ -13,7 +13,7 @@ and open the template in the editor.
         <div class="boxTxt" style="background-color: #ccc">
             <h1>REGISTRATION FORM</h1>
         </div>
-        <?php include ('includes/registerForm.php');?>
+        <?php include('includes/registerForm.php');?>
     </div>
 </div>
 

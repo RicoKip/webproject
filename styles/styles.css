@@ -215,6 +215,8 @@ main window navigantion bar content holder
 .navbar{
 	display: flex;
 	background-color: #333;
+        
+       
 }
 /*navigation bar link text styling*/
 .navbar a{
@@ -323,17 +325,24 @@ span.passWd{
 }
 
 /*loggedin dropdown*/
-button.dropdownBtn{
-    /*background-color: #333;*/
-    padding: 10px 20px;
-    color: white;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-}
+
 .dropdown{
-    display: flex;
+    position: relative;
+    display: inline-block;
+    
 }
+
+.dropdown .dropdownBtn{
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    
+    font-family: inherit;
+    margin: 0;
+}
+
 .dropdown-content{
     display: none;
     position: absolute;
