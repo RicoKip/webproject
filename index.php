@@ -18,8 +18,8 @@ session_start();
                 <div class="dropdown">
                     <button class="dropdownBtn" style="width:100%;height:100%;background-color: #333;"><?php echo $_SESSION['userName']?></button>                
                     <div class="dropdown-content">
-                        <a href="#">Account</a>
-                        <a href="#">Profile</a>
+                        <a href="account.php">Account</a>
+                        <a href="profile.php">Profile</a>
                         <a href="logout.php">Log-Out</a>
                     </div>
                 </div>

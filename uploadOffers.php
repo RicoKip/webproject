@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 //connection to database
-$conn = mysqli_connect('localhost', 'mamp', 'root', 'fyp'); 
+include ('connection.php'); 
 
 session_start();
 //get user id from session
@@ -14,21 +14,24 @@ $userImageId = $_SESSION['userId'];
 
 if(isset($_POST['upload'])){
     //uploaded images will be stored here
-    $target = "images/uploads".basename($_FILES['image']['name']);
+    $target = "images/uploads/".basename($_FILES['image']['name']);
     
     //get submitted data
     $image = $_FILES['image']['name'];
     $titleImage = $_POST['title'];
     $detail = $_POST['text'];
     
-    //query 
-    $sql = "INSERT INTO offers (user_id, title, offerDesc, image) VALUES ('".$userImageId."', '".$titleImage."', '".$detail."', '".$image."')";
+    $query = "";
+    //query
+    move_uploaded_file($_FILES['image']['tmp_name'], $target);
+    $query = "INSERT INTO offers (user_id, title, offerDesc, image) VALUES ('".$userImageId."', '".$titleImage."', '".$detail."', '".$image."')";
     //execute query
-    mysqli_query($conn, $sql);
+    $result = mysqli_query($conn, $query);
     
     //store images into folder
-    if(move_uploaded_file($_FILES['image']['tempName'], $target)){
-        $error = "Image was uploaded successflly";
+    if($result){
+        $error = "Offer was uploaded successflly";
+        header("location:account.php");
     }else{
         $error = "Error! Uploading image";
     }

@@ -2,7 +2,7 @@
 
 //connect to database then run loop to retrieve all data in the list
 //*without session
-$conn = mysqli_connect('localhost', 'mamp', 'root', 'fyp'); 
+include ('connection.php'); 
 //set session
 session_start();
 //get logged in user id

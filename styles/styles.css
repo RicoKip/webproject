@@ -53,7 +53,7 @@ hr.new1{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 /*users image placeholder*/
 .backGroundImage{
@@ -62,6 +62,7 @@ hr.new1{
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
+        
 }
 /*location*/
 .locIcon{
@@ -322,6 +323,7 @@ span.passWd{
 	padding: 10px;
 	text-align: center;
 	background: gray;
+       
 }
 
 /*loggedin dropdown*/

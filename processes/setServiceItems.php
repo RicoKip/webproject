@@ -1,14 +1,14 @@
 <?php
 
 //retrieve services form database
-$conn = mysqli_connect('localhost', 'mamp', 'root', 'fyp'); 
+include ('connection.php');  
 
 //$userId = $_SESSION['userId'];
-
-$sql = "SELECT * FROM offers WHERE title = 'service'";
-$result = mysqli_query($db, $sql);
+$title = "service";
+$sql = "SELECT * FROM offers WHERE title = '$title'";
+$result = mysqli_query($conn, $sql);
 while($row = mysqli_fetch_array($result)){
-    echo "<div class='row boxSpc' style='height: 100px;border: solid gainsboro 1px;border-radius: 2px;margin: 5px;'>";
+    echo "<div class='row boxSpc' style='height: 150px;border: solid gainsboro 1px;border-radius: 2px;margin: 5px;'>";
         echo "<div class='col-3 imagebox'>";
             echo "<img src='images/uploads/".$row['image']."' style ='width: 100%;max-height: 100%;object-fit: contain;'>";
         echo "</div>";

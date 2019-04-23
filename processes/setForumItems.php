@@ -1,15 +1,14 @@
 <?php
 
-//connect to database then run loop to retrieve all data in the list
-//*without session
-$conn = mysqli_connect('localhost', 'mamp', 'root', 'fyp'); 
+//retrieve services form database
+include ('connection.php');  
 
 //$userId = $_SESSION['userId'];
-
-$sql = "SELECT * FROM offers WHERE title = 'forum'";
-$result = mysqli_query($db, $sql);
+$title = "forum";
+$sql = "SELECT * FROM offers WHERE title = '$title'";
+$result = mysqli_query($conn, $sql);
 while($row = mysqli_fetch_array($result)){
-    echo "<div class='row boxSpc' style='height: 100px;border: solid gainsboro 1px;border-radius: 2px;margin: 5px;'>";
+    echo "<div class='row boxSpc' style='height: 150px;border: solid gainsboro 1px;border-radius: 2px;margin: 5px;'>";
         echo "<div class='col-3 imagebox'>";
             echo "<img src='images/uploads/".$row['image']."' style ='width: 100%;max-height: 100%;object-fit: contain;'>";
         echo "</div>";
