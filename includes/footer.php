@@ -8,7 +8,5 @@ and open the template in the editor.
             <p>@Web-Based Agriculture</p>
         </div>
     </body>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAh-2b6-TpKt1mD_gqt68TprUZK3sPmtpE&callback=initMap">
-      </script>
+    
 </html>

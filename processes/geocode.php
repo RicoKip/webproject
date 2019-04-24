@@ -5,7 +5,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-require ('connection.php');
+include ('connection.php');
 
 session_start();
 
@@ -15,5 +15,9 @@ $zip = $_SESSION['userZip'];
 $city = $_SESSION['userCity'];
 $country = $_SESSION['userCountry'];
 
-$fullAdr = "'".$adr1."', '".$adr2."', '".$city."', '".$zip."', '".$country."' ";
-$geo = file_get_contents($fullAdr);
+$address = "$adr1, $adr2, $city, $zip, $country ";
+//$prepAddr = str_replace(' ','+',$address);
+//$geocode=file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.$prepAddr.'&key=AIzaSyAh-2b6-TpKt1mD_gqt68TprUZK3sPmtpE');
+//$output= json_decode($geocode);
+//$latitude = $output->results[0]->geometry->location->lat;
+//$longitude = $output->results[0]->geometry->location->lng;

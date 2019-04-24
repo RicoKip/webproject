@@ -97,6 +97,25 @@ hr.new1{
 .marg{
     margin: 8px 0px;
 }
+.imgGalleryBox{
+    padding: 0 6px;
+    float: left;
+    width: 20%;
+    height: 200px;
+    margin: 5px;
+}
+#floating-panel {
+    position: absolute;
+    top: 10px;
+    left: 25%;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    line-height: 30px;
+    padding-left: 10px;
+}
 
 /*
 Main windows stylings

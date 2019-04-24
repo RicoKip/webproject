@@ -1,7 +1,6 @@
 <?php
 
 //connect to database then run loop to retrieve all data in the list
-//*without session
 include ('connection.php'); 
 //set session
 session_start();
