@@ -6,10 +6,20 @@
             <name>FYP</name>
         </data>
         <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+            <word>API</word>
+            <word>deisigns</word>
+            <word>geocoding</word>
             <word>Google</word>
             <word>html</word>
+            <word>javascript</word>
+            <word>Kipkemoi</word>
+            <word>mysql</word>
             <word>navbar</word>
+            <word>Outsourced</word>
+            <word>php</word>
             <word>setFarmItems</word>
+            <word>StackOverflow</word>
+            <word>YouTube</word>
         </spellchecker-wordlist>
     </configuration>
 </project>
