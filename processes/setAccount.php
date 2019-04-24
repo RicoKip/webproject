@@ -1,10 +1,5 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 //db connection
 include ('connection.php'); 
 //set session
@@ -12,12 +7,19 @@ session_start();
 
 //get user details from session
 $user_id = $_SESSION['userId'];
-
+//get all details from user's row 
 $query = "select * from users where id = '$user_id'";
 $result = mysqli_query($conn, $query);
+//fetch user data
 $row = mysqli_fetch_array($result);
 
-//account layout
+/*
+ *account layout: gets image from database ans displays on background image, Image has to match stored images in the  
+ *project directory ../images/upload/
+ *includes a setUserForums method to obtain all the forumns the specific user id is tied to in the database
+ *includes a form which users upload details to either services or forums
+ *includes a form to upload images to a gallery table.
+ */
 echo "<div class='row'>
          <div class='content contentBrd'>
              <div class='backGroundImage slideshowBrd'>

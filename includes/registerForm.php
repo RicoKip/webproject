@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<!--action: process to server-->
+<!--action: process to server tor register user-->
 <form action="register.php" method="post" enctype="multipart/form-data">
     <div class="containerLgn">
         <p>Please complete this form to register account</p>
         <hr class="new1">
         <div class="row boxTxt">
+            <!--Upload user profile image-->
             <p>Click UPLOAD to select an image file</p>
             <input type='hidden' name='size' value='1000000'>
             <input type="file" name="image">

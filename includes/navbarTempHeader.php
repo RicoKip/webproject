@@ -1,9 +1,5 @@
  <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<!--Header for navigation bar-->
 <div class="row">
     <div class=" col-10 navbar">
         <a href="index.php">Home</a>
@@ -12,5 +8,6 @@ and open the template in the editor.
         <a href="forum.php">Forum</a>
     </div>
     <div class="col-2 navbar" > 
+        <!--Session method inserted here-->
             
 

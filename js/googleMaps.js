@@ -1,17 +1,4 @@
-/* 
- * Google Maps API KEY: AIzaSyBTJHaXQooicxa8E0GahtPkbDv7R1BO5YU
- * 
- * var loc = {lat: 52.906425, lng: -1.253231};
-    map = new google.maps.Map(document.getElementById('mapView'), {
-        zoom: 8,
-        center: loc
-        });
-    var marker = new google.maps.Marker({
-        position: loc,
-        map: map
-        });
- * 
-/* global google */
+// Script to set user location in profile page. 
 var geocoder;
 var map;
 function initMap(){
@@ -26,6 +13,7 @@ function initMap(){
         codeAddress(geocoder, map);
     });
 }
+//Converts address to geocode and displays location on map
 function codeAddress(geocoder, resultsMap){
     var address = document.getElementById('address').value;
     geocoder.geocode( { 'address': address}, function(results, status) {

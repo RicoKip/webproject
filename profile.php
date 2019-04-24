@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<!--Set sessions-->
 <?php
 session_start();
 ?>
+<!--set page title-->
 <?php $title = "Profile"?>
 <?php include ('includes/header.php');?>
 <!--set navigation bar with sessions-->
 
 <?php include ('includes/navbarTempHeader.php');?>
     <?php
+    //check if session is set: display the session set as the new navbar item. Get access to hidden links
         if(isset($_SESSION['userName'])){?>
             <div class="dropdown">
                 <button class="dropdownBtn" style="width:100%;height:100%;background-color: #333;"><?php echo $_SESSION['userName']?></button>                
@@ -26,7 +24,7 @@ session_start();
         }else{
             include ('includes/loginForm.php');
         }
-        ?>
+    ?>
 <?php include ('includes/navbarTempFooter.php');?>
 
 <!--include profile-->

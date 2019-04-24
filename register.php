@@ -1,12 +1,13 @@
 <?php
- //establish connection
+//registration process. called by registration form
+//establish connection
 require_once ('connection.php');
 //start session
 session_start();
 
-//get user details
+//get user details from form. When upload button is selected
 if(isset($_POST['upload'])){
-    //uploaded images will be stored here
+    //uploaded images will be stored in this directory
     $target = "images/uploads/".basename($_FILES['image']['name']);
 
     //get submitted data
@@ -21,25 +22,29 @@ if(isset($_POST['upload'])){
     $city = $_POST['city'];
     $country = $_POST['country'];
     $userDesc = $_POST['uDesc'];
-
+    //empty query variable
     $query = "";
-
+    //create a query statement to check if the email being registered exists
     $query = "select * from users where email = '$email'";
     $result = mysqli_query($conn, $query);
     $row = mysqli_fetch_array($result);
+    //if it exists an erro message with user being redirected back to registration 
     if(mysqli_num_rows($result) > 0){
         //checks if email already exists. outputs an error message
         echo "This email already exists. Register a new one";
         header("location:registrationForm.php");
 
     }else{
+        //if no email exists...
         //move uploaded image to directory
         move_uploaded_file($_FILES['image']['tmp_name'], $target);
+        //statement to insert data
         $query = "INSERT INTO users (title, name, email, pass, address_one, address_two, zip, city, country, uDesc, image)"
                 . "VALUES ('$title', '$name', '$email', '$pass', '$addr1', '$addr2', '$zip', '$city', '$country', '$userDesc', '$image')";
         $result = mysqli_query($conn, $query);
-        
+        //once query is executed
         if($result){
+            //set another query to obtain the information stored for the user
             $query = "select * from users where email = '$email'";
             //get the newly inserted detaisl
             $newresult = mysqli_query($conn, $query);
@@ -65,9 +70,11 @@ if(isset($_POST['upload'])){
             }
 
         }else{
+            //query failed to execute
             echo "Did not connect!";
             header("location:registrationForm.php");
         }
     }
 }
+//close database connection
 mysqli_close();

@@ -1,32 +1,27 @@
 /*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-
-    Created on : 08-Apr-2019, 18:17:45
-    Author     : erickipkemoi
+Created on : 08-Feb-2019, 18:17:45
+Author     : erickipkemoi
+Additional referenced styling
+Ref: https://www.w3schools.com/howto/howto_css_login_form.asp - Login forms
+   : https://www.w3schools.com/howto/howto_css_signup_form.asp - Registration forms
+   : https://www.w3schools.com/cssref/css3_pr_mediaquery.asp - Layout Responsive styling
+   : Outsourced free images
+References code have been edited to fit the systems functionality.
 */
 
-
-/*
-Misc stylings
-box sizing, W3S, allowas padding and border to be included in the total width and height
-*/
+/*general styling*/
 * {
 	box-sizing: border-box
 }
-
 /*container for columns*/
 .row{
 	display: flex;
 	flex-wrap: wrap;
 }
-
 /*row styling*/
 .rowClr{
    background-color: gainsboro;
 }
-
 /*columns contained in rows*/
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -64,7 +59,7 @@ hr.new1{
 	position: relative;
         
 }
-/*location*/
+/*location icon for farms page*/
 .locIcon{
     height: 30px;
     width: 50px;
@@ -74,7 +69,7 @@ hr.new1{
     background-size: contain;
     position: relative;
 }
-/*location*/
+/*mail icon form farm card: farms.php*/
 .mailIcon{
     height: 30px;
     width: 50px;
@@ -84,7 +79,7 @@ hr.new1{
     background-size: contain;
     position: relative;
 }
-/*map view*/
+/*map view styling*/
 #mapView{
     height: 400px;
     width: 100%;
@@ -97,6 +92,7 @@ hr.new1{
 .marg{
     margin: 8px 0px;
 }
+/*user gallery view*/
 .imgGalleryBox{
     padding: 0 6px;
     float: left;
@@ -104,32 +100,15 @@ hr.new1{
     height: 200px;
     margin: 5px;
 }
-#floating-panel {
-    position: absolute;
-    top: 10px;
-    left: 25%;
-    z-index: 5;
-    background-color: #fff;
-    padding: 5px;
-    border: 1px solid #999;
-    text-align: center;
-    line-height: 30px;
-    padding-left: 10px;
-}
 
-/*
-Main windows stylings
-*/
-
+/*Main body styling*/
 body{
 	font-family: Arial;
 	margin: 0;
 }
 
-/*
-Index page styling
-main window slideshow static image display
-*/
+/*Index page styling
+main window slideshow: static image display*/
 .slideshow{
 	height: 500px;
 	background-image: url(../images/cornFieldProject.jpg);
@@ -168,7 +147,7 @@ main window slideshow static image display
     background-size: cover;
     position: relative;
 }
-/*class style for content boxes*/
+/*styling for content boxes*/
 .boxSpc{
     border: solid gainsboro 1px;
     border-radius: 2px;
@@ -188,7 +167,7 @@ main window slideshow static image display
     margin-top: 50px;
     color: #333;
 }
-/*Sessions box will hold the sign-in and username*/
+/*Sessions box to hold the sign-in and username*/
 .sessionBox{
     display: inline-flex;
     text-align: center;
@@ -202,7 +181,7 @@ main window slideshow static image display
 .sessionBox:hover{
     background-color: #ddd;
 }
-/*main window sign-in display*/
+/*main optional window sign-in display*/
 .navbarIndexMenu{
 	display: inline-flex;
 	margin-top: 5px;
@@ -211,7 +190,6 @@ main window slideshow static image display
 	border-radius: 2px;
 	float: right;
 }
-/*home window navbar styling*/
 .navbarIndexMenu a{
     color: white;
     padding: 14px 20px;
@@ -228,33 +206,28 @@ main window slideshow static image display
     color: black;
 }
 
-/*
-Styling for other window views
-main window navigantion bar content holder
-*/
+/*Styling for window views
+main window navigantion bar content holder*/
 .navbar{
 	display: flex;
 	background-color: #333;
         
        
 }
-/*navigation bar link text styling*/
+
 .navbar a{
 	color: white;
 	padding: 14px 20px;
 	text-decoration: none;
 	text-align: center;
 }
-/*mouse hover styling*/
+
 .navbar a:hover{
 	background-color: #ddd;
 	color: black;
 }
 
-/*
-*Login and Registration Form Styling
-*W3S
-*/
+/*Login and Registration Form Styling*/
 input[type=text], input[type=password]{
     width: 100%;
     padding: 12px 20px;
@@ -290,7 +263,7 @@ span.passWd{
     padding-top: 16px;
 }
 
-/*login modal background*/
+/*login modal form styling*/
 .modal{
     display: none;
     position: fixed;
@@ -304,14 +277,13 @@ span.passWd{
     background-color: rgba(0,0,0,0.4);
     padding-top: 60px;
 }
-/*modal content*/
 .modal-content{
     background-color: #fefefe;
     margin: 5% auto 15% auto;
     border: solid #888 1px;
     width: 50%;
 }
-/*zoom animantion*/
+/*zoom animantion modal stylings*/
 .animate{
     animation: animatezoom 0.6s
 }
@@ -345,14 +317,12 @@ span.passWd{
        
 }
 
-/*loggedin dropdown*/
-
+/*loggedin dropdown styling*/
 .dropdown{
     position: relative;
     display: inline-block;
     
 }
-
 .dropdown .dropdownBtn{
     font-size: 16px;  
     border: none;
@@ -363,7 +333,6 @@ span.passWd{
     font-family: inherit;
     margin: 0;
 }
-
 .dropdown-content{
     display: none;
     position: absolute;
@@ -387,11 +356,8 @@ span.passWd{
     background-color: #ddd;
 }
 
-
-/*
-Responsive layout allows columns to stack
-ontop of ewach othe when the crenn size reduces
-*/
+/*Responsive layout allows columns to stack
+ontop of ewach othe when the crenn size reduces*/
 @media only screen and (max-device-width: 400px){
 	.row, .navbar{
 		flex-direction: column;

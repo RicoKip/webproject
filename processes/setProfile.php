@@ -4,14 +4,20 @@
 include ('connection.php');
 
 //set session
-session_start(); 
+session_start();
+//obtain user data from sessions
 $user_id = $_SESSION['userId'];
 
-//get user data
+//get user data referencing session data
 $query = "select * from users where id = '$user_id'";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_array($result);
 
+/*
+ * output required information. All users forumn posted
+ * location of the user through Google Maps API
+ * Display all users images in gallery
+ */
 echo "<div class='row'>
          <div class='content contentBrd'>
              <div class='backGroundImage slideshowBrd'>

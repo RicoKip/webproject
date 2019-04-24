@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<!--Establish session to update navigation bar status to show user signed in-->
 <?php
 session_start();
 ?>
+<!--set page information-->
 <?php $title = "Account"?>
+<!--call html header-->
 <?php include ('includes/header.php');?>
 <!--set navigation bar with sessions-->
 <?php include ('includes/navbarTempHeader.php');?>
@@ -25,11 +23,10 @@ session_start();
         }else{
             include ('includes/loginForm.php');
         }
-        ?>
+    ?>
 <?php include ('includes/navbarTempFooter.php');?>
 
+<!--set body of account-->
 <?php include ('processes/setAccount.php');?>
-<!--method to display gallery upload form-->
-
-
+<!--set html footer-->
 <?php include ('includes/footer.php');?>
