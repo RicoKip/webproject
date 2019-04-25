@@ -1,4 +1,6 @@
-<!--
+
+<?php
+/*
 Created by: Eric Kipkemoi
 Edited and referenced other code implementation
 Outsourced images used in the project
@@ -10,9 +12,7 @@ web programming implementation.
 YouTube tutorials - server user login and registration with sessions, image database uploads, Google Maps
 geocoding and implementation, database storage implementation using php and mysql, embedded web javascript
 Links to the reference criteria available in the project report
--->
-<?php
-
+*/
 //establish connection to database
 include ('connection.php');
 
